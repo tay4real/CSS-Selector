@@ -541,11 +541,32 @@
       removeSearch();
 
       //   EX13) Write a function to change the background of the jumbotron
-      const changeBackground = () => {
+      const changeJumbotronBackground = (color) => {
         let jumbotron = document.getElementsByClassName("jumbotron")[0];
-        jumbotron.classList.replace("bg-dark", "bg-primary");
+        jumbotron.classList.remove("bg-dark");
+        jumbotron.style.backgroundColor = color;
       };
-      changeBackground();
+      changeJumbotronBackground("blue");
+
+      //    EX14) Write a function to change the color of the main title
+      const changeMainTitleColor = (color) => {
+        let mainTitle = document.querySelector("h1.display-4");
+        mainTitle.style.color = color;
+      };
+      changeMainTitleColor("orange");
+
+      //    EX15) Write a function to change the column size for post headings
+      const changePostHeadingAttrib = () => {};
+
+      //    EX16) Write a function to remove all the links under "Elsewhere"
+      const removeLinks = () => {
+        let parent = document.querySelector(".blog-sidebar div:nth-of-type(3)");
+        let links = document.querySelector(
+          ".blog-sidebar div:nth-of-type(3) ol"
+        );
+        parent.removeChild(links);
+      };
+      removeLinks();
     </script>
   </body>
 </html>
