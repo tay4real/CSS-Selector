@@ -539,6 +539,13 @@
         parent.removeChild(child);
       };
       removeSearch();
+
+      //   EX13) Write a function to change the background of the jumbotron
+      const changeBackground = () => {
+        let jumbotron = document.getElementsByClassName("jumbotron")[0];
+        jumbotron.classList.replace("bg-dark", "bg-primary");
+      };
+      changeBackground();
     </script>
   </body>
 </html>
