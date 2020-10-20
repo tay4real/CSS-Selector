@@ -526,8 +526,19 @@
         newLink.setAttribute("href", Link);
         navBar.appendChild(newLink);
       };
-
       newNavLink("Latest News", "#");
+
+      //   EX12) Write a function to remove the "Search" magnifying glass icon
+      const removeSearch = () => {
+        let parent = document.querySelector(
+          ".blog-header .row div:last-of-type"
+        );
+        let child = document.querySelector(
+          ".blog-header .row div:last-of-type a:first-of-type"
+        );
+        parent.removeChild(child);
+      };
+      removeSearch();
     </script>
   </body>
 </html>
