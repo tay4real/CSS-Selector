@@ -567,6 +567,19 @@
         parent.removeChild(links);
       };
       removeLinks();
+
+      // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+      const trimPost = () => {
+        let firstPara = document.querySelectorAll(
+          ".blog-post p:nth-of-type(2)"
+        );
+
+        for (let i = 0; i < firstPara.length; i++) {
+          firstPara[i].innerText =
+            firstPara[i].innerText.substring(0, 51) + "...";
+        }
+      };
+      trimPost();
     </script>
   </body>
 </html>
